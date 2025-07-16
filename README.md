@@ -8,7 +8,7 @@ Este proyecto es una muestra de mi trabajo como **Desarrollador Web Front-End**.
 
 ## 📸 Vista Previa
 
-<img src="./assets/images/foto.jpeg" alt="Foto de Oscar Cruz Chavez" width="180" style="border-radius: 50%; margin-bottom: 1rem;" />
+<img src="./assets/images/demo.png" alt="Foto del portafolio" width="180" style="border-radius: 50%; margin-bottom: 1rem;" />
 
 ![Vista previa del portafolio](./assets/images/peliculas.png)
 
