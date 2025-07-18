@@ -758,14 +758,14 @@
         setInterval(changeTypewriterText, 7000);
         
         // Prevent zoom on mobile
-        document.addEventListener('gesturestart', function(e) {
-            e.preventDefault();
-        });
+        // document.addEventListener('gesturestart', function(e) {
+        //     e.preventDefault();
+        // });
         
         // Prevent horizontal scroll
-        document.addEventListener('touchmove', function(e) {
-            if (e.scale !== 1) { e.preventDefault(); }
-        }, { passive: false });
+        // document.addEventListener('touchmove', function(e) {
+        //     if (e.scale !== 1) { e.preventDefault(); }
+        // }, { passive: false });
     </script>
 </body>
 </html>
