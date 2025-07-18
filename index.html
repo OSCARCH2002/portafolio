@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" style="width:100vw;overflow-x:hidden;">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Portafolio profesional de Oscar Cruz Chavez | Desarrollador Web Front-End">
     <meta name="robots" content="index,follow">
     <title>Oscar Cruz Chavez | Desarrollador Web</title>
@@ -70,6 +70,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
         .gradient-text {
             background: linear-gradient(90deg, #3B82F6, #10B981, #6366F1);
             background-size: 200% auto;
@@ -161,17 +171,24 @@
         .dark .tech-tag {
             background: #60A5FA;
         }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
     </style>
 </head>
 
-<body class="bg-gray-50 dark:bg-dark-900 font-sans text-gray-800 dark:text-gray-200 antialiased transition-colors duration-300 overflow-x-hidden w-full">
+<body class="bg-gray-50 dark:bg-dark-900 font-sans text-gray-800 dark:text-gray-200 antialiased transition-colors duration-300">
     <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-dark-900 transition-opacity duration-500">
         <div class="loader rounded-full h-16 w-16 border-4 border-t-4 border-gray-200 dark:border-gray-700"></div>
     </div>
 
     <!-- Header -->
     <header class="fixed w-full bg-white/80 dark:bg-dark-800/80 backdrop-blur-md shadow-sm z-40">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold gradient-text">OscarDev</a>
             
             <!-- Desktop Navigation -->
@@ -181,8 +198,6 @@
                 <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition">Formación</a>
                 <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition">Proyectos</a>
                 <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition">Contacto</a>
-                
-             
                 
                 <!-- Dark Mode Toggle -->
                 <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
@@ -208,9 +223,6 @@
                 <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition">Contacto</a>
                 
                 <div class="flex items-center justify-between pt-4">
-                  
-                    </div> -->
-                    
                     <button id="mobile-theme-toggle" class="p-2 rounded-full focus:outline-none">
                         <i id="mobile-theme-icon" class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
                     </button>
@@ -219,13 +231,13 @@
         </div>
     </header>
 
-    <main class="w-full overflow-x-hidden">
+    <main class="w-full overflow-hidden">
         <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center pt-20 pb-16 px-6">
+        <section id="home" class="min-h-screen flex items-center pt-20 pb-16 px-4 sm:px-6">
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-2">¡Hola! 👋 Soy</p>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-white">Oscar Cruz </h1>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 dark:text-white">Oscar Cruz Chavez</h1>
                     <div class="mb-6 h-10">
                         <p class="text-2xl md:text-3xl font-mono gradient-text typewriter">Desarrollador Web Front-End</p>
                     </div>
@@ -263,61 +275,61 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
+        <section id="skills" class="py-20 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Mis <span class="gradient-text">Habilidades</span></h2>
                     <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Tecnologías y herramientas que utilizo para mis proyectos</p>
                 </div>
                 
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" data-aos="fade-up">
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-html.png" alt="HTML" class="w-16 h-16 mb-4">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6" data-aos="fade-up">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-html.png" alt="HTML" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">HTML5</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-css.png" alt="CSS" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-css.png" alt="CSS" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">CSS3</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-js.png" alt="JavaScript" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-js.png" alt="JavaScript" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">JavaScript</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-tailwind.png" alt="Tailwind CSS" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-tailwind.png" alt="Tailwind CSS" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">Tailwind CSS</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-git.png" alt="Git" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-git.png" alt="Git" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">Git</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/icon-github-hab.png" alt="GitHub" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/icon-github-hab.png" alt="GitHub" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">GitHub</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/php.png" alt="PHP" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/php.png" alt="PHP" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">PHP</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/linux.png" alt="Linux" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/linux.png" alt="Linux" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">Linux</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/mysql.png" alt="MySQL" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/mysql.png" alt="MySQL" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">MySQL</h3>
                     </div>
                     
-                    <div class="skill-card bg-white dark:bg-dark-700 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
-                        <img src="./assets/images/astro.png" alt="Astro" class="w-16 h-16 mb-4">
+                    <div class="skill-card bg-white dark:bg-dark-700 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center">
+                        <img src="./assets/images/astro.png" alt="Astro" class="w-14 h-14 sm:w-16 sm:h-16 mb-4">
                         <h3 class="font-medium text-lg dark:text-white">Astro</h3>
                     </div>
                 </div>
@@ -325,7 +337,7 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="py-20 px-6 bg-white dark:bg-dark-900">
+        <section id="education" class="py-20 px-4 sm:px-6 bg-white dark:bg-dark-900">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Mi <span class="gradient-text">Formación</span></h2>
@@ -395,14 +407,14 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6 bg-gray-50 dark:bg-dark-800">
+        <section id="projects" class="py-20 px-4 sm:px-6 bg-gray-50 dark:bg-dark-800">
             <div class="container mx-auto">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Mis <span class="gradient-text">Proyectos</span></h2>
                     <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Algunos de mis proyectos recientes</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Project 1 -->
                     <div class="project-card bg-white dark:bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300" data-aos="zoom-in">
                         <div class="relative overflow-hidden">
@@ -470,8 +482,6 @@
                                 <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 text-xs rounded-full">PHP</span>
                                 <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 text-xs rounded-full">Laravel</span>
                                 <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 text-xs rounded-full">Tailwind</span>
-
-
                             </div>
                             <div class="flex space-x-3">
                                 <a href="https://apppelicula.onrender.com" target="_blank" class="px-4 py-2 bg-primary-light dark:bg-primary-dark text-white rounded-lg text-sm font-medium hover:bg-blue-600 dark:hover:bg-blue-500 transition flex items-center">
@@ -488,7 +498,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-dark-800 dark:to-dark-900">
+        <section id="contact" class="py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white dark:from-dark-800 dark:to-dark-900">
             <div class="container mx-auto max-w-4xl">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Contáctame</h2>
@@ -522,7 +532,7 @@
                             </div>
                         </div>
                         
-                        <div class="md:w-1/2 p-10">
+                        <div class="md:w-1/2 p-6 sm:p-10">
                             <form id="contact-form" name="contacto-portafolio" netlify class="space-y-6">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nombre</label>
@@ -556,7 +566,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark-900 text-white py-12 px-6">
+    <footer class="bg-dark-900 text-white py-12 px-4 sm:px-6">
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
@@ -746,6 +756,16 @@
         
         setTimeout(changeTypewriterText, 3500);
         setInterval(changeTypewriterText, 7000);
+        
+        // Prevent zoom on mobile
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        
+        // Prevent horizontal scroll
+        document.addEventListener('touchmove', function(e) {
+            if (e.scale !== 1) { e.preventDefault(); }
+        }, { passive: false });
     </script>
 </body>
 </html>
